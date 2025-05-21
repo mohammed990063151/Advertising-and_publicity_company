@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Advertising agency</title>
+  <title>Digital Room</title>
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
@@ -35,17 +35,45 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+ <style>
+  #header .logo {
+    max-width: 350px;  /* ✅ العرض الطويل */
+    height: auto;
+    margin-right: auto;
+  }
+
+  .logo a {
+    display: block;
+    width: 100%;
+  }
+
+  .logo-img-full {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* Responsive للتحكم في الجوال */
+  @media (max-width: 768px) {
+    .logo {
+      max-width: 250px;
+    }
+  }
+</style>
+
+
 </head>
 
 <body>
 
- 
+
  <!-- ======= Header ======= -->
   @include('layouts.body.header')
  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
- 
+
  <!-- End Hero -->
 
   <main id="main">

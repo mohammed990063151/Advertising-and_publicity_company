@@ -1,6 +1,6 @@
 @php
 $sliders = DB::table('sliders')->get();
-    
+
 @endphp
 
 
@@ -16,13 +16,13 @@ $sliders = DB::table('sliders')->get();
             <div class="carousel-content animate__animated animate__fadeInUp">
               <h2>{{$slider->title}}</h2>
               <p>{{$slider->dec}}</p>
-              <div class="text-center"><a href="" class="btn-get-started">Read More</a></div>
+              <div class="text-center"><a href="{{route('contact')}}" class="btn-get-started">تواصل معنا</a></div>
             </div>
           </div>
         </div>
         @endforeach
         <!-- Slide 1 -->
-       
+
 
 
       </div>
