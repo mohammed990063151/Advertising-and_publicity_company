@@ -1,7 +1,7 @@
 @extends('layouts.master_home')
 @include('layouts.body.slider')
 @section('home_content')
-    
+
 
 <!-- ======= About Us Section ======= -->
 <section id="about-us" class="about-us">
@@ -132,7 +132,7 @@
 
       <div class="row" data-aos="fade-up">
         <div class="col-lg-12 d-flex justify-content-center">
-         
+
         </div>
       </div>
 
@@ -140,18 +140,19 @@
 
         @foreach ($images as $img)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-          <img src="{{$img->image}}" class="img-fluid" alt="">
+          <img src="{{ asset($img->image)}}" class="img-fluid" alt="">
           <div class="portfolio-info">
             <h4>PORTFOLIO</h4>
-            
-            <a href="{{$img->image}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+
+            {{-- <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a> --}}
+              <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1" ><i class="bx bx-plus"></i></a>
             <a href="portfolio-details.html" class="details-link" title="More Details"></i></a>
           </div>
         </div>
         @endforeach
-        
 
-        
+
+
         </div>
 
       </div>
@@ -172,13 +173,16 @@
         @foreach ($brands as $brand)
         <div class="col-lg-3 col-md-4 col-6">
           <div class="client-logo">
-          <img src="{{$brand->brand_image}}" class="img-fluid" alt="{{$brand->brand_name}}">
+          <img src="{{$brand->brand_image}}" class="img-fluid" alt="{{$brand->brand_name}}" style="
+    height: 90px;
+    width: 190px;
+">
           </div>
         </div>
         @endforeach
-        
 
-        
+
+
 
       </div>
 

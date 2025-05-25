@@ -26,20 +26,37 @@
       </div>
 
       <div class="row portfolio-container" data-aos="fade-up">
-
+  {{-- @if(!empty($img->image)) --}}
         @foreach ($images as $img)
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-        <img src="{{$img->image}}" class="img-fluid" alt="">
+
+             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+        <img src="{{asset($img->image)}}" class="img-fluid" alt="">
             <div class="portfolio-info">
               <h4>Our Clients</h4>
-              <a href="{{$img->image}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
+              <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1" ><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.html" class="details-link" title="More Details"></a>
             </div>
-          </div>
-        @endforeach
-        
 
-        
+
+          </div>
+
+        @endforeach
+   {{-- @else
+
+             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+
+          <p class="m-0">لا يوجد بيانات</p>
+            </div> --}}
+
+
+          {{-- </div> --}}
+
+
+
+        {{-- @endif --}}
+
+
 
       </div>
 

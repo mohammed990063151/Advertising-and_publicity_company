@@ -33,7 +33,7 @@ Route::get('/', function () {
     $abouts = DB::table('home_abouts')->first();
     $images = Multipic::all();
     $service = DB::table('services')->first();
-    
+
     return view('home', compact('brands','abouts','images','service'));
 })->name('main.home');
 
@@ -92,10 +92,12 @@ Route::get('/multi/all', [MultiimageController::class, 'index'])->name('multi.im
 Route::post('/multi/add', [MultiimageController::class, 'multiimage'])->name('store.images');
 
 Route::get  ('/multi/delete/{id}', [MultiimageController::class, 'multidelete'])->name('multy.delete');
+// Route::get('/category/create', [MultiimageController::class, 'addcategory'])->name('add.category');
 
 
 //Portfolio
-Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
+Route::get('/portfolio/{id}', [PortfolioController::class, 'index'])->name('portfolio');
+// Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio');
 
 //contact admin
 Route::get('/admin/contact', [ContactController::class, 'admincontact'])->name('contact.admin');

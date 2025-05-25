@@ -18,8 +18,9 @@
 
   <!-- ======= Contact Section ======= -->
   <div class="map-section">
-    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
-  </div>
+    {{-- <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
+    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6461.072864981364!2d46.70170451724156!3d24.65280921201535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2K3ZhNmI2YrYp9iqINin2YTYsdi02YrYrw!5e0!3m2!1sen!2ssa!4v1747915535945!5m2!1sen!2ssa" frameborder="0" allowfullscreen></iframe>
+
 
   <section id="contact" class="contact">
     <div class="container">
@@ -66,22 +67,22 @@
             <div class="form-row">
               <div class="col-md-6 form-group">
                 <input type="text" name="name" class="form-control" placeholder="Your Name"   />
-                
+
               </div>
               <div class="col-md-6 form-group">
                 <input type="email" class="form-control" name="email" placeholder="Your Email"   />
-                
+
               </div>
             </div>
             <div class="form-group">
               <input type="text" class="form-control" name="subject"  placeholder="Subject"  />
-              
+
             </div>
             <div class="form-group">
               <textarea class="form-control" name="message" rows="5"  placeholder="Message"></textarea>
-              
+
             </div>
-            
+
             <button class="btn btn-success" type="submit">Send Message</button>
           </form>
         </div>

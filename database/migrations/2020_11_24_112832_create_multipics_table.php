@@ -16,7 +16,9 @@ class CreateMultipicsTable extends Migration
         Schema::create('multipics', function (Blueprint $table) {
             $table->id();
             $table->string('image');
+             $table->integer('category_id')->unsigned();
             $table->timestamps();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
