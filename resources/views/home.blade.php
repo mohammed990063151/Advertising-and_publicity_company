@@ -8,7 +8,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>About Us</strong></h2>
+        <h2>معلومات عنا</strong></h2>
       </div>
 
       <div class="row content">
@@ -40,7 +40,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Services</strong></h2>
+        <h2>ما نقدمه</strong></h2>
       <p>{{$service->mtitle}}</p>
       </div>
 
@@ -126,8 +126,11 @@
   <section id="portfolio" class="portfolio">
     <div class="container">
 
-      <div class="section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+      <div class="section-title" data-aos="fade-up" style="
+    text-align: center;
+    padding-bottom: 30px;
+">
+        <h2>أعمالنا</h2>
       </div>
 
       <div class="row" data-aos="fade-up">
@@ -141,13 +144,13 @@
         @foreach ($images as $img)
         <div class="col-lg-4 col-md-6 portfolio-item filter-app">
           <img src="{{ asset($img->image)}}" class="img-fluid" alt="">
-          <div class="portfolio-info">
-            <h4>PORTFOLIO</h4>
+          {{-- <div class="portfolio-info"> --}}
+            {{-- <h4>PORTFOLIO</h4> --}}
 
             {{-- <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a> --}}
-              <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1" ><i class="bx bx-plus"></i></a>
-            <a href="portfolio-details.html" class="details-link" title="More Details"></i></a>
-          </div>
+              {{-- <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1" ><i class="bx bx-plus"></i></a> --}}
+            {{-- <a href="portfolio-details.html" class="details-link" title="More Details"></i></a> --}}
+          {{-- </div> --}}
         </div>
         @endforeach
 
@@ -165,7 +168,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-title">
-        <h2>Brands</h2>
+        <h2>عملاؤنا</h2>
       </div>
 
       <div class="row no-gutters clients-wrap clearfix" data-aos="fade-up">

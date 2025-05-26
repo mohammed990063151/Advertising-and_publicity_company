@@ -13,14 +13,19 @@
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav class="nav-menu d-none d-lg-block">
+        <nav class="nav-menu d-none d-lg-block" style="
+    direction: rtl;
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    text-align: right;
+">
 
             <ul>
-                <li class="active"><a href="{{ route('main.home') }}">Home</a></li>
-                <li><a href="#about-us">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li class="drop-down"><a href="#">Portfolio</a>
-                    <ul>
+                <li class="active"><a href="{{ route('main.home') }}">الريئسة</a></li>
+                <li><a href="#about-us">معلومات عنا</a></li>
+                <li><a href="#services">ما نقدمه</a></li>
+                <li class="drop-down"><a href="#">أعمالنا</a>
+                    <ul style="max-height: 300px; overflow-y: auto; direction: rtl;">
                         <li><a href="{{route('portfolio', $id=1)}}"style="font-size: 20px;">بنرات</a></li>
                         <li><a href="{{route('portfolio', $id=2)}}"style="font-size: 20px;">استكرات</a></li>
                         <li><a href="{{route('portfolio', $id=3)}}"style="font-size: 20px;">بنرات</a></li>
@@ -48,9 +53,11 @@
                         <li><a href="{{route('portfolio', $id=25)}}"style="font-size: 20px;">اكياس</a></li>
                     </ul>
                 </li>
+
+
                 {{-- <li><a href="{{ route('portfolio') }}">Portfolio</a></li> --}}
-                <li><a href="#clients">Brands</a></li>
-                <li><a href="{{ route('contact') }}">Contact</a></li>
+                <li><a href="#clients">عملاؤنا</a></li>
+                <li><a href="{{ route('contact') }}">تواصل معنا</a></li>
 
             </ul>
         </nav><!-- .nav-menu -->

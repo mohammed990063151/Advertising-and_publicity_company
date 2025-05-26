@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="{{asset('frontend/assets/img/favicon.png')}}" rel="icon">
-  <link href="{{asset('frontend/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
+  {{-- <link href="{{asset('frontend/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon"> --}}
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -60,6 +60,23 @@
       max-width: 250px;
     }
   }
+  #hero .carousel-content  {
+       font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+  }
+  .row{
+       font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+  }
+  [data-aos^=fade][data-aos^=fade].aos-animate{
+       font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            text-align: right;
+
+  }
+
 </style>
 
 
