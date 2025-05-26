@@ -2,7 +2,7 @@
 @section('home_content')
 
 
-<section id="breadcrumbs" class="breadcrumbs">
+{{-- <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
@@ -14,12 +14,29 @@
       </div>
 
     </div>
-  </section><!-- End Breadcrumbs -->
+  </section> --}}
+<section class="section-title-area">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="fade-down">
+      <div class="col-lg-8 text-center">
+        <h2 class="section-title">📍 تواصل معنا</h2>
+        <p class="section-subtitle">نحن هنا لمساعدتك في أي وقت، لا تتردد في التواصل معنا.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- End Breadcrumbs -->
 
   <!-- ======= Contact Section ======= -->
   <div class="map-section">
-    {{-- <iframe src="" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> --}}
-    <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6461.072864981364!2d46.70170451724156!3d24.65280921201535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2K3ZhNmI2YrYp9iqINin2YTYsdi02YrYrw!5e0!3m2!1sen!2ssa!4v1747915535945!5m2!1sen!2ssa" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.195709452236!2d46.703822775193174!3d24.6513909780664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f04f777535ae1%3A0xa908e46a3d016b42!2sAl%20Rasheed%20Pastries%20%26%20Sweets!5e0!3m2!1sen!2ssa!4v1748292103380!5m2!1sen!2ssa" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+{{-- <div id="map" style="width: 100%; height: 450px;"></div> --}}
 
 
   <section id="contact" class="contact">

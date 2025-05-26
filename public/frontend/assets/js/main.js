@@ -133,32 +133,20 @@
       aos_init();
     });
 
-    // Initiate venobox (lightbox feature used in portofilo)
-    // $(document).ready(function() {
-    //   $('.venobox').venobox();
-    // });
-    // $('.venobox').venobox();
-    // ...existing code...
-// $(window).on('load', function() {
-//   var portfolioIsotope = $('.portfolio-container').isotope({
-//     itemSelector: '.portfolio-item'
-//   });
+   $('.venobox').venobox({
+  framewidth: '100%',
+  frameheight: '100%',
+  border: '0',
+  bgcolor: '#000', // خلفية سوداء مثل وضع المسرح
+  overlayColor: 'rgba(0, 0, 0, 0.95)',
+  maxWidth: '100vw',
+  maxHeight: '100vh',
+  numeratio: true,
+  infinigall: true,
+  titleattr: 'title',
+  spinner: 'wave'
+});
 
-//   $('#portfolio-flters li').on('click', function() {
-//     $("#portfolio-flters li").removeClass('filter-active');
-//     $(this).addClass('filter-active');
-
-//     portfolioIsotope.isotope({
-//       filter: $(this).data('filter')
-//     });
-//     aos_init();
-//   });
-
-//   // Initiate venobox (lightbox feature used in portfolio)
-  $('.venobox').venobox();
-  
-// });
-// ...existing code...
 
 
   });

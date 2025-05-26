@@ -2,7 +2,7 @@
 @section('home_content')
 
 
-<section id="breadcrumbs" class="breadcrumbs">
+{{-- <section id="breadcrumbs" class="breadcrumbs">
     <div class="container">
 
       <div class="d-flex justify-content-between align-items-center">
@@ -14,7 +14,42 @@
       </div>
 
     </div>
-  </section><!-- End Breadcrumbs -->
+  </section><!-- End Breadcrumbs --> --}}
+<section id="hero" class="hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-lg-8">
+        <h1 class="hero-title" data-aos="fade-down" data-aos-delay="200">
+          مرحباً بك في معرضنا الإبداعي
+        </h1>
+        <p class="hero-subtitle mt-3" data-aos="fade-up" data-aos-delay="400">
+          استعرض أفضل أعمالنا بكل أناقة واحترافية
+        </p>
+        <a href="#portfolio" class="btn btn-hero mt-4 scrollto" data-aos="zoom-in" data-aos-delay="600">
+          تصفح المعرض
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <section id="hero" class="hero d-flex align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center" data-aos="fade-up">
+        <h1 class="hero-title">مرحباً بك في معرض الصور</h1>
+        <p class="hero-subtitle mt-3">اكتشف أعمالنا وابدأ رحلتك البصرية معنا</p>
+        <a href="#portfolio" class="btn btn-primary mt-4 scrollto">شاهد المعرض</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
   <!-- ======= Portfolio Section ======= -->
   <section id="portfolio" class="portfolio">
@@ -30,31 +65,15 @@
         @foreach ($images as $img)
 
              <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-
-        <img src="{{asset($img->image)}}" class="img-fluid" alt="">
-            <div class="portfolio-info">
-              <h4>Our Clients</h4>
-              <a href="{{ asset($img->image)}}" data-gall="portfolioGallery" class="venobox preview-link" title="App 1" ><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"></a>
-            </div>
+  <a href="{{ asset($img->image) }}" class="venobox" data-gall="portfolioGallery" title="تفاصيل">
+    <img src="{{ asset($img->image) }}" class="img-fluid" alt="">
+  </a>
+</div>
 
 
-          </div>
 
         @endforeach
-   {{-- @else
 
-             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-
-          <p class="m-0">لا يوجد بيانات</p>
-            </div> --}}
-
-
-          {{-- </div> --}}
-
-
-
-        {{-- @endif --}}
 
 
 

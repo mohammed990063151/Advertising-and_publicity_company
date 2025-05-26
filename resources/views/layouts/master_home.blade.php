@@ -28,6 +28,8 @@
 
   <!-- Template Main CSS File -->
   <link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 
   <!-- =======================================================
   * Template Name: Company - v2.1.0
@@ -77,6 +79,87 @@
 
   }
 
+ /* تكبير الصورة داخل Venobox */
+.vbox-content img {
+  max-width: 100% !important;
+  max-height: 100vh !important;
+  object-fit: contain;
+  width: auto;
+  height: auto;
+}
+
+/* اجعل أزرار التالي/السابق أوضح */
+.vbox-next, .vbox-prev {
+  font-size: 40px;
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  z-index: 9999;
+}
+
+.vbox-close {
+  font-size: 30px;
+  color: #fff !important;
+  right: 20px;
+  top: 10px;
+}
+
+
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(10, 10, 10, 0.6)),
+              url('/images/your-header.jpg') center center / cover no-repeat;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  color: #e0e0e0;
+}
+
+.btn-hero {
+  background-color: #ff4c60;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-hero:hover {
+  background-color: #e63950;
+  transform: scale(1.05);
+}
+.section-title-area {
+  background-color: #f9f9f9;
+  padding: 80px 0 40px;
+  margin-top: 70px; /* لتعويض الهيدر الثابت */
+  border-bottom: 1px solid #eee;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #777;
+  margin-top: 10px;
+}
+
+
+
+
 </style>
 
 
@@ -119,6 +202,16 @@
 
   <!-- Template Main JS File -->
   <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+
+
 
 </body>
 
