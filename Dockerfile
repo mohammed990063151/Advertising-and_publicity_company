@@ -1,28 +1,30 @@
-FROM php:8.1-apache
+FROM php:8.2-fpm
 
-WORKDIR /var/www/html
-
+# تثبيت الإضافات المطلوبة
 RUN apt-get update && apt-get install -y \
-    git \
-    unzip \
-    libzip-dev \
+    build-essential \
+    libpng-dev \
+    libjpeg-dev \
     libonig-dev \
     libxml2-dev \
     zip \
-    curl
+    unzip \
+    curl \
+    git \
+    libzip-dev \
+    && docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd zip
 
-RUN docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath xml
-
-RUN a2enmod rewrite
-
-COPY . /var/www/html
-
-RUN chown -R www-data:www-data storage bootstrap/cache
-
+# تثبيت Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-RUN composer install --no-dev --optimize-autoloader
+WORKDIR /var/www
 
-EXPOSE 80
+COPY . .
 
-CMD ["apache2-foreground"]
+RUN composer install
+
+RUN chown -R www-data:www-data /var/www && chmod -R 755 /var/www
+
+EXPOSE 9000
+
+CMD ["php-fpm"]
